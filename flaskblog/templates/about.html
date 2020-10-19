@@ -1,0 +1,12 @@
+<!-- To have the same layout in every page we have layout.html in templates
+     extends "layout.html" call that page to give the common structure-->
+
+<!-- block content is the section where we write code to do the feature
+     { % block video_box } ... { % endblock video_box %} the layout.html
+     has this line where it replaces the code of from here
+    -->
+{% extends "layout.html" %}
+{% block content %}
+    <img src="{{ url_for('video_feed') }}">
+    <a class="button" href="{{url_for('audio')}}">Audio</a>
+{% endblock content %}
